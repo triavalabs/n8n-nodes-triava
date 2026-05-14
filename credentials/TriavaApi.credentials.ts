@@ -14,9 +14,9 @@ export class TriavaApi implements ICredentialType {
 			displayName: 'Base URL',
 			name: 'baseUrl',
 			type: 'string',
-			default: 'https://api.triavalabs.com/v1',
+			default: 'https://api.triavalabs.com',
 			required: true,
-			description: 'The OpenAI-compatible endpoint URL (without trailing slash)',
+			description: 'The base URL of your Triava/Ollama endpoint (without trailing slash)',
 		},
 		{
 			displayName: 'API Key',

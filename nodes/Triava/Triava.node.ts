@@ -8,7 +8,7 @@ export class Triava implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["model"]}}',
-		description: 'OpenAI-compatible chat completions for self-hosted Gemma 4 endpoints',
+		description: 'Text generation with self-hosted Gemma 4 models via Triava sovereign endpoints',
 		defaults: {
 			name: 'Triava',
 		},
@@ -63,7 +63,7 @@ export class Triava implements INodeType {
 				name: 'maxTokens',
 				type: 'number',
 				default: 2048,
-				description: 'Maximum tokens to generate (includes reasoning + content)',
+				description: 'Maximum number of tokens to generate in the response',
 			},
 			{
 				displayName: 'Temperature',
@@ -81,17 +81,20 @@ export class Triava implements INodeType {
 				displayName: 'Operation',
 				name: 'operation',
 				type: 'hidden',
-				default: 'chatCompletion',
+				default: 'generate',
 				routing: {
 					request: {
 						method: 'POST',
-						url: '/chat/completions',
+						url: '/api/generate',
 						body: {
 							model: '={{$parameter["model"]}}',
-							messages:
-								'={{$parameter["systemPrompt"] ? [{"role": "system", "content": $parameter["systemPrompt"]}, {"role": "user", "content": $parameter["message"]}] : [{"role": "user", "content": $parameter["message"]}]}}',
-							max_tokens: '={{$parameter["maxTokens"]}}',
-							temperature: '={{$parameter["temperature"]}}',
+							prompt: '={{$parameter["message"]}}',
+							system: '={{$parameter["systemPrompt"]}}',
+							stream: false,
+							options: {
+								num_predict: '={{$parameter["maxTokens"]}}',
+								temperature: '={{$parameter["temperature"]}}',
+							},
 						},
 					},
 				},
