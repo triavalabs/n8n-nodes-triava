@@ -97,6 +97,16 @@ export class Triava implements INodeType {
 							},
 						},
 					},
+					output: {
+						postReceive: [
+							{
+								type: 'rootProperty',
+								properties: {
+									property: 'response',
+								},
+							},
+						],
+					},
 				},
 			},
 		],
