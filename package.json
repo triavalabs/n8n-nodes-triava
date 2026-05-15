@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-triava",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "n8n community node for Triava — sovereign Gemma 4 text generation for self-hosted Ollama endpoints",
 	"license": "MIT",
 	"homepage": "https://github.com/triavalabs/n8n-nodes-triava",
