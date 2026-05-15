@@ -1,4 +1,5 @@
 import {
+	type Icon,
 	type IAuthenticateGeneric,
 	type ICredentialTestRequest,
 	type ICredentialType,
@@ -8,6 +9,10 @@ import {
 export class TriavaApi implements ICredentialType {
 	name = 'triavaApi';
 	displayName = 'Triava API';
+	icon: Icon = {
+		light: 'file:../nodes/Triava/triava.svg',
+		dark: 'file:../nodes/Triava/triava.dark.svg',
+	};
 	documentationUrl = 'https://github.com/triavalabs/n8n-nodes-triava';
 	properties: INodeProperties[] = [
 		{
