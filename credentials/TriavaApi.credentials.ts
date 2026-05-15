@@ -40,7 +40,7 @@ export class TriavaApi implements ICredentialType {
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: '={{$credentials.baseUrl}}',
-			url: '/models',
+			url: '/api/tags',
 			method: 'GET',
 		},
 	};
