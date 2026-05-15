@@ -1,7 +1,7 @@
 {
 	"name": "n8n-nodes-triava",
 	"version": "0.1.0",
-	"description": "n8n community node for Triava — OpenAI-compatible drop-in for self-hosted Gemma 4 endpoints",
+	"description": "n8n community node for Triava — sovereign Gemma 4 text generation for self-hosted Ollama endpoints",
 	"license": "MIT",
 	"homepage": "https://github.com/triavalabs/n8n-nodes-triava",
 	"keywords": [
@@ -9,8 +9,10 @@
 		"n8n",
 		"triava",
 		"gemma",
+		"gemma4",
 		"llm",
-		"openai-compatible"
+		"sovereign-ai",
+		"ollama"
 	],
 	"author": {
 		"name": "Robin Converse",
