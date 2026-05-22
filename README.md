@@ -1,10 +1,10 @@
 # n8n-nodes-triava
 
-n8n community node for [Triava Labs](https://triavalabs.com) — sovereign Gemma 4 text generation for self-hosted Ollama endpoints.
+n8n community node for sovereign Gemma 4 text generation on self-hosted Ollama endpoints
 
 ## Status
 
-Active development. Built for the [Gemma 4 Challenge](https://dev.to/t/gemmachallenge) (Build with Gemma 4 track). v1 ships May 24, 2026.
+Active development. Released and in production use at [Triava Labs](https://triavalabs.com). Iterating based on real usage. Production deployment writeup on [DEV.to](https://dev.to/cloudninealt/self-hosting-gemma-4-for-production-automation-revealed-two-ollama-bugs-1oo4).
 
 ## What it does
 
@@ -36,18 +36,19 @@ Default endpoint: `https://api.triavalabs.com` — or configure any Ollama insta
 
 ## Installation
 
-In your n8n instance:
+npm publish in progress. Until the package is live on npm, install via cloning:
+
+1. Clone this repo into your n8n custom nodes directory
+2. Run `npm install` inside the cloned directory
+3. Build with `npm run build`
+4. Restart n8n
+
+Once the package publishes to npm, the standard n8n community node install path will work:
 
 1. Go to **Settings → Community Nodes**
 2. Click **Install**
 3. Enter `n8n-nodes-triava`
 4. Restart n8n
-
-Or via npm:
-
-```bash
-npm install n8n-nodes-triava
-```
 
 ## Credential setup
 
