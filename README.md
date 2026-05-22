@@ -8,7 +8,7 @@ Active development. Released and in production use at [Triava Labs](https://tria
 
 ## What it does
 
-Connects n8n workflows to a self-hosted Gemma 4 endpoint via Ollama's native `/api/generate` API. Drop it into any workflow to run brand-voice content generation, drafting, or summarization through infrastructure you own.
+Connects n8n workflows to a self-hosted Gemma 4 endpoint via Ollama's native `/api/generate` API. Use it in any n8n workflow to run brand-voice content generation, drafting, or summarization through infrastructure you own.
 
 Built around `triava-prod` — a custom Gemma 4 26B MoE model with Triava's brand voice baked in. Also works with any Ollama-served Gemma 4 variant.
 
